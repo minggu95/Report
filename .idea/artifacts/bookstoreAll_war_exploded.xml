@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bookstoreAll:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/bookstoreAll_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bookstoreAll" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="c3p0-0.9.1.2.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="commons-dbutils-1.4.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="commons-fileupload-1.2.1.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="commons-io-1.4.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="jstl.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="mail.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="mysql-connector-java-5.0.8-bin.jar" module-name="bookstoreAll" />
+          <element id="library" level="module" name="standard.jar" module-name="bookstoreAll" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bookstoreAll/web/Web" />
+    </root>
+  </artifact>
+</component>
