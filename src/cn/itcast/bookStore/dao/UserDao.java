@@ -29,6 +29,14 @@ public class UserDao {
 
 	}
 
+	// 根据用户名查找密码
+	public User findUserByName(String username) throws SQLException {
+		String sql = "select * from user where username=?";
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		return runner.query(sql, new BeanHandler<User>(User.class), username);
+
+	}
+
 	// 激活用戶
 	public void activeUser(String activeCode) throws SQLException {
 		String sql = "update user set state=? where activecode=?";

@@ -1,5 +1,7 @@
 package cn.itcast.bookStore.service;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -9,7 +11,9 @@ import cn.itcast.bookStore.dao.UserDao;
 import cn.itcast.bookStore.domain.User;
 import cn.itcast.bookStore.exception.ActiveUserException;
 import cn.itcast.bookStore.exception.RegisterException;
+import cn.itcast.bookStore.utils.MD5Util;
 import cn.itcast.bookStore.utils.MailUtils;
+import cn.itcast.bookStore.utils.Md5UtilHelp;
 
 public class UserService {
 	private UserDao dao = new UserDao();
@@ -18,6 +22,14 @@ public class UserService {
 	public void register(User user) throws RegisterException {
 		// 调用dao完成注册操作
 		try {
+            User tempUser = dao.findUserByName(user.getUsername());
+            if(tempUser != null)
+            {
+                throw new RegisterException("用户已存在");
+            }
+			//密码MD5加密
+			String psw = Md5UtilHelp.getEncryptedPwd(user.getPassword());
+			user.setPassword(psw);
 			dao.addUser(user);
 
 			// 发送激活邮件
@@ -61,21 +73,34 @@ public class UserService {
 	// 登录操作
 	public User login(String username, String password) throws LoginException {
 		try {
-			//根据登录时表单输入的用户名和密码，查找用户
-			User user = dao.findUserByUsernameAndPassword(username, password);
+			User user = dao.findUserByName(username);
+            //根据登录时表单输入的用户名和密码，查找用户
+			//User user = dao.findUserByUsernameAndPassword(username, password);
 			//如果找到，还需要确定用户是否为激活用户
 			if (user != null) {
+                String pwdInDb = user.getPassword();
+                if(!Md5UtilHelp.validPassword(password, pwdInDb)){ // 该用户存在
+                    throw new LoginException("密码错误");
+                }
 				// 只有是激活才能登录成功，否则提示“用户未激活”
 				if (user.getState() == 1) {
 					return user;
 				}
 				throw new LoginException("用户未激活");
 			}
-			throw new LoginException("用户名或密码错误");
+            else{
+                throw new LoginException("用户未注册");
+            }
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new LoginException("登录失败");
-		}
+		} catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            throw new LoginException("登录失败");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            throw new LoginException("登录失败");
+        }
 
-	}
+    }
 }

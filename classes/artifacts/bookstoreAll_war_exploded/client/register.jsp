@@ -14,51 +14,6 @@
 		document.getElementById("img").src = "${pageContext.request.contextPath}/imageCode?time="
 				+ new Date().getTime();
 	}
-
-	/* function tosubmit(){
-		//邮箱验证
-		var email = document.getElementById("email").value;
-		var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-		if(filter.test(email)) {
-			alert("邮箱正确"); 
-		}else{
-			alert("邮箱格式不正确!"); return false;
-		}
-		//用户验证
-		var username = document.getElementById("username").value;
-		alert(username);
-		if(username == ""){
-			alert("用户名为空,请填写用户名!"); return false;
-		}else{
-			alert("用户名正确");
-		}
-		//密码及确认密码
-		var password = document.getElementById("password").value;
-		var repassword = document.getElementById("repassword").value;
-
-		if(password =="" && repassword==""){
-			alert("密码或确认密码为空,请填写!"); return false;
-		}else {
-			alert(password);alert(repassword);
-			if(password == repassword){
-				alert("2次密码正确");
-			}else{
-				alert("2次密码不相符!请确认!"); return false;
-			}
-		}
-		//电话验证
-		var telephone = document.getElementById("telephone").value;
-		var r1 = /^1\d{10}$/;
-
-		if(r1.test(telephone)){
-			alert("电话正确!");
-		}else{
-			alert("电话格式不正确!!"); return false;
-		}
-
-		document.getElementById("registform").submit();
-	} */
 	
 	function tosubmit(){
 		//邮箱验证
