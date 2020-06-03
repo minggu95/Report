@@ -71,7 +71,7 @@ CREATE TABLE `orders`  (
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES ('27e0ce9b-484e-4843-b7af-c51fc537b53a', 598.9, '', '李国明', '', 0, '2016-01-21 13:20:40', 2);
+INSERT INTO `orders` VALUES ('27e0ce9b-484e-4843-b7af-c51fc537b53a', 598.9, '', '12331224', '', 0, '2016-01-21 13:20:40', 2);
 
 -- ----------------------------
 -- Table structure for products
