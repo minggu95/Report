@@ -39,7 +39,7 @@ public class UserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RegisterException("注冊失败");
+			throw new RegisterException(e.getMessage());
 		}
 	}
 
@@ -93,13 +93,13 @@ public class UserService {
             }
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new LoginException("登录失败");
+			throw new LoginException(e.getMessage());
 		} catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-            throw new LoginException("登录失败");
+            throw new LoginException(e.getMessage());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-            throw new LoginException("登录失败");
+            throw new LoginException(e.getMessage());
         }
 
     }
