@@ -38,6 +38,7 @@ public class Product implements Serializable {
 //		this.author = author;
 //	}
 
+
 	public void setId(String id) {
 		this.id = id;
 	}

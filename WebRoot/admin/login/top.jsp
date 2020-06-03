@@ -34,7 +34,7 @@ TH {
 		    //IE和firefox
 //			window.top.open('', '_parent', '');
 //			window.top.close();
-            window.open('../../client/','_top')//////
+            window.open('../../client/','_top')
         }
 		//如果你使用的是firefox浏览器必须要做以下设置 
 		//1、在地址栏输入about:config然后回车，警告确认 

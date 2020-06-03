@@ -59,15 +59,15 @@
 														<tr>
 															<td width="10%">${vs.count}</td>
 															<td width="40%">${entry.key.name }</td>
-															<td width="10%">${entry.key.price }</td>
+															<td width="10%">${entry.key.nowprice }</td>
 															<td width="10%">${entry.key.category}</td>
 															<td width="10%">
 																<input name="text" type="text" value="${entry.value}" style="width:20px" readonly="readonly"/>
 															</td>
-															<td width="10%">${entry.key.price*entry.value}</td>
+															<td width="10%">${entry.key.nowprice*entry.value}</td>
 														</tr>
 													</table>
-													<c:set var="totalPrice" value="${totalPrice+entry.key.price*entry.value}"/>
+													<c:set var="totalPrice" value="${totalPrice+entry.key.nowprice*entry.value}"/>
 												</c:forEach>
 
 												<table cellspacing="1" class="carttable">
