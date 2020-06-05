@@ -31,9 +31,11 @@ TH {
 	function exitSys() {
 		var flag = window.confirm("确认退出系统吗?");
 		if (flag) {
-			window.top.open('', '_parent', '');
-			window.top.close();
-		}
+		    //IE和firefox
+//			window.top.open('', '_parent', '');
+//			window.top.close();
+            window.open('../../client/','_top')
+        }
 		//如果你使用的是firefox浏览器必须要做以下设置 
 		//1、在地址栏输入about:config然后回车，警告确认 
 		//2、在过滤器中输入”dom.allow_scripts_to_close_windows“，双击即可将此值设为true 即可完成了 
