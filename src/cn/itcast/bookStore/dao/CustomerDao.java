@@ -41,8 +41,15 @@ public class CustomerDao {
         return runner.query(sql, new BeanHandler<Customer>(Customer.class), id);
     }
 
-    public List<Customer> findAllCustomer() throws SQLException{
-        String sql = "select * from customer  order by id desc limit 0,10";
+    public List<Customer> findAllCustomer(Customer customer) throws SQLException{
+        String sql = "select * from customer where 1=1 ";
+        if(!"".equals(customer.getCustomerNo()) && customer.getCustomerNo() != null){
+            sql+=" and customerNo='"+customer.getCustomerNo()+"'";
+        }
+        if(!"".equals(customer.getCustomerName()) && customer.getCustomerName() != null){
+            sql+=" and customerName='"+customer.getCustomerName()+"'";
+        }
+        sql+="order by id desc limit 0,10";
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
         return runner.query(sql, new BeanListHandler<Customer>(Customer.class));
     }

@@ -13,9 +13,13 @@
     var reg = /^[1-9]\d*$/;
     /*删除选中行*/
     function deleteCustomer() {
+        var check = $("input[type='checkbox']:checked");//在table中找input下类型为checkbox属性为选中状态的数据
+        if(check.length==0){
+            alert("请选择一条数据！");
+            return;
+        }
         var r=confirm("确认删除！");
         if (r==true)
-        var check = $("input[type='checkbox']:checked");//在table中找input下类型为checkbox属性为选中状态的数据
 		var check_val = [];
         check.each(function () {//遍历
             var id = $(this).closest('tr').find('td').eq(1).text()
@@ -91,6 +95,15 @@
     {
         window.location.reload();
     }
+    function searchCustomer() {
+        var customerNo = document.getElementById("customerNo").value;
+        var customerName = document.getElementById("customerName").value;
+        location.href = "${pageContext.request.contextPath}/listCustomer?customerNo=" + customerNo+"&customerName="+customerName;
+    }
+    function resetText() {
+		document.getElementById("customerNo").value = "";
+        document.getElementById("customerName").value = "";
+    }
 </script>
 </HEAD>
 <body>
@@ -99,11 +112,45 @@
 		<table cellSpacing="1" cellPadding="0" width="100%" align="center" bgColor="#f5fafe" border="0">
 			<tbody>
 				<tr>
+					<td class="ta_01" align="center" bgColor="#afd1f3">
+						<strong>查 询 条 件</strong>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" width="100%">
+							<tr>
+								<td height="22" align="center" bgColor="#f5fafe" class="ta_01">
+									客户编号</td>
+								<td class="ta_01" bgColor="#ffffff"><input type="text"
+																		   name="customerNo" size="15" value="${customerNo}" id="customerNo" class="bg" />
+								</td>
+								<td height="22" align="center" bgColor="#f5fafe" class="ta_01">
+									客户名称：</td>
+								<td class="ta_01" bgColor="#ffffff"><input type="text"
+																		   name="customerName" size="15" value="${customerName}" id="customerName" class="bg" />
+								</td>
+							</tr>
+							<tr>
+								<td class="ta_01" align="left">
+									<button type="button" id="search" name="search"
+											class="search" onclick="searchCustomer()">查询
+									</button>
+									<button type="button" id="reset" name="reset"
+											class="reset" onclick="resetText()">重置
+									</button>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+				<tr>
 					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>客 户 列 表</strong>
 					</td>
 				</tr>
 				<tr>
-					<td class="ta_01" align="right">
+					<td class="ta_01" align="left">
 						<button type="button" id="add" name="add"
 							class="button_add" onclick="addCustomer()">新增
 						</button>

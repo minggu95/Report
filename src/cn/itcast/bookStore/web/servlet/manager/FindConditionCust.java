@@ -1,18 +1,16 @@
 package cn.itcast.bookStore.web.servlet.manager;
 
 import cn.itcast.bookStore.domain.Customer;
-import cn.itcast.bookStore.domain.Notice;
 import cn.itcast.bookStore.service.CustomerService;
-import cn.itcast.bookStore.service.NoticeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-public class FindAllCustomerServlet extends HttpServlet{
+public class FindConditionCust  extends HttpServlet {
+
 
 
     private static final long serialVersionUID = 1L;
@@ -25,16 +23,14 @@ public class FindAllCustomerServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        CustomerService nService = new CustomerService();
+        CustomerService customerService = new CustomerService();
         Customer customer = new Customer();
-        String customerNo = req.getParameter("customerNo");
-        String customerName = req.getParameter("customerName");
-        customer.setCustomerNo(customerNo);
-        customer.setCustomerName(customerName);
-        List<Customer> list = nService.findAllCustomer(customer);
-        req.setAttribute("customers", list);
-        req.setAttribute("customerNo", customerNo);
-        req.setAttribute("customerName", customerName);
-        req.getRequestDispatcher("/admin/customer/list.jsp").forward(req, resp);
+        String id = req.getParameter("id");
+
+        customer = customerService.findCustomer(id);
+
+        req.setAttribute("customer", customer);
+
+        req.getRequestDispatcher("/admin/customer/edit.jsp").forward(req, resp);
     }
 }

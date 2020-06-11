@@ -42,9 +42,9 @@ public class CustomerService {
         }
     }
 
-    public List<Customer> findAllCustomer(){
+    public List<Customer> findAllCustomer(Customer customer){
         try{
-            return customerDao.findAllCustomer();
+            return customerDao.findAllCustomer(customer);
         }catch (SQLException e){
             throw new RuntimeException("查询客户失败!");
         }
