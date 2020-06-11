@@ -53,6 +53,9 @@
   <tr>
   	<td><a href="${pageContext.request.contextPath}/listNotice" target="mainFrame" class="left_list">公告管理</a></td>
   </tr>
+  <tr>
+    <td><a href="${pageContext.request.contextPath}/listCustomer" target="mainFrame" class="left_list">客户管理</a></td>
+  </tr>
 </table>
 </body>
 </html>

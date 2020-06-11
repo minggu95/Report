@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 			String role = user.getRole();
 			// 如果是超级用户，就进入到网上书城的后台管理系统；否则进入我的账户页面
 			if ("超级用户".equals(role)) {
-				response.sendRedirect(request.getContextPath() + "/admin/login/home.jsp");
+				response.sendRedirect(request.getContextPath() + "/admin/login/homeChange.jsp");
 				return;
 			} else {
 				response.sendRedirect(request.getContextPath() + "/client/index.jsp?user="+username);

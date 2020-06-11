@@ -322,6 +322,51 @@
 		<servlet-name>ShowIndexSerlvet</servlet-name>
 		<url-pattern>/ShowIndexSerlvet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<servlet-class>cn.itcast.bookStore.web.servlet.manager.AddCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<url-pattern>/addCustomer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FindAllCustomerServlet</servlet-name>
+		<servlet-class>cn.itcast.bookStore.web.servlet.manager.FindAllCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindAllCustomerServlet</servlet-name>
+		<url-pattern>/listCustomer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FindCustomerServlet</servlet-name>
+		<servlet-class>cn.itcast.bookStore.web.servlet.manager.FindCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindCustomerServlet</servlet-name>
+		<url-pattern>/findCustomer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditCustomerServlet</servlet-name>
+		<servlet-class>cn.itcast.bookStore.web.servlet.manager.EditCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditCustomerServlet</servlet-name>
+		<url-pattern>/editCustomer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<servlet-class>cn.itcast.bookStore.web.servlet.manager.DeleteCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<url-pattern>/deleteCustomer</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

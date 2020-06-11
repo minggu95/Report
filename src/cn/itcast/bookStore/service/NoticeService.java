@@ -30,7 +30,7 @@ public class NoticeService {
 		try {
 			return dao.findNoticeById(n_id);
 		} catch (SQLException e) {
-			throw new RuntimeException("根据id查找公告失败！");
+			throw new RuntimeException("查找公告失败！");
 		}
 	}
 	
@@ -39,8 +39,7 @@ public class NoticeService {
 		try {
 			dao.updateNotice(bean);
 		} catch (SQLException e) {
-//			throw new RuntimeException("根据id修改公告失败！");
-			e.printStackTrace();
+			throw new RuntimeException("修改公告失败！");
 		}
 	}
 	
@@ -49,7 +48,7 @@ public class NoticeService {
 		try {
 			dao.deleteNotice(n_id);
 		} catch (SQLException e) {
-			throw new RuntimeException("根据id删除公告失败！");
+			throw new RuntimeException("删除公告失败！");
 		}
 	}
 	
