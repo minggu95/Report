@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>bookStore首页</title>
+	<title>LLGREPORT首页</title>
 </head>
 
 <body>

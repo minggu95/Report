@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>工厂系统</title>
+<title>LLGREPORT</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/client/css/factoryMain.css" type="text/css" />
 </head>
 
@@ -12,19 +12,14 @@
 		<form action="${pageContext.request.contextPath}/factoryLogin" method="post">
 			<table width="900px" border="0" cellspacing="0">
 				<tr>
-					<a href="${pageContext.request.contextPath }/client/factoryLogin.jsp">
-						<img src="${pageContext.request.contextPath}/client/images/logo.png" width="900" height="60" border="0" />
-					</a>
-				</tr>
-				<tr>
 					<table width="100%" border="0" cellspacing="0">
 						<tr>
 							<td>
 								<div id="logindiv">
 									<table width="100%" border="0" cellspacing="0">
 										<tr>
-											<td style="text-align:center; padding-top:20px">
-												<img src="${pageContext.request.contextPath }/client/images/logintitle.gif" width="150" height="30" />
+											<td style="text-align:center;padding-top:40px;">
+												<font size="6" style="font-weight: 600;" color="#00bfff">LLGREPORT</font>
 											</td>
 										</tr>
 										<tr>

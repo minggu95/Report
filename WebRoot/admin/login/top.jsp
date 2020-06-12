@@ -34,7 +34,7 @@ TH {
 		    //IE和firefox
 //			window.top.open('', '_parent', '');
 //			window.top.close();
-            window.open('../../client/','_top')
+            window.open('../../index.jsp','_top')
         }
 		//如果你使用的是firefox浏览器必须要做以下设置 
 		//1、在地址栏输入about:config然后回车，警告确认 
@@ -45,14 +45,12 @@ TH {
 </HEAD>
 <body>
 	<table width="100%" height="70%" border="0" cellspacing="0"
-		cellpadding="0">
+		cellpadding="0" bgcolor="#00bfff">
 		<tr>
-			<td><img width="160px"
-				src="${pageContext.request.contextPath}/admin/images/top_05.png">
-			</td>
-
 			<td width="100%"
-				background="${pageContext.request.contextPath}/admin/images/top_11.png">
+				<%--background="${pageContexcontextPath}/admin/images/top_02.jpg">--%>
+				align="center">
+				<font size="10" style="font-weight: 700;">LLGREPORT</font>
 			</td>
 		</tr>
 	</table>

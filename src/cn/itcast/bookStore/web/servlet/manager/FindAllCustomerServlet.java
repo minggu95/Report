@@ -1,9 +1,7 @@
 package cn.itcast.bookStore.web.servlet.manager;
 
 import cn.itcast.bookStore.domain.Customer;
-import cn.itcast.bookStore.domain.Notice;
 import cn.itcast.bookStore.service.CustomerService;
-import cn.itcast.bookStore.service.NoticeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
