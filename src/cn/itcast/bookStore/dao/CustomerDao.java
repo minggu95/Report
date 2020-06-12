@@ -49,7 +49,7 @@ public class CustomerDao {
         if(!"".equals(customer.getCustomerName()) && customer.getCustomerName() != null){
             sql+=" and customerName='"+customer.getCustomerName()+"'";
         }
-        sql+="order by id desc limit 0,10";
+        sql+="order by id desc";// limit 0,10
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
         return runner.query(sql, new BeanListHandler<Customer>(Customer.class));
     }

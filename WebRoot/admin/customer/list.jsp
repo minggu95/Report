@@ -6,9 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/admin/css/Style.css"
 	rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/admin/css/page.css" rel="stylesheet" type="text/css" />
 <script language="javascript"
 	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script language="javascript"
+		src="${pageContext.request.contextPath}/admin/js/helpUtil.js"></script>
 <script type="text/javascript">
     var reg = /^[1-9]\d*$/;
     /*删除选中行*/
@@ -193,8 +196,27 @@
 						</table>
 					</td>
 				</tr>
+				<tr>
+					<td class="ta_01" align="center">
+						<div id="barcon" class="barcon" >
+							    <div id="barcon1" class="barcon1"></div>
+							        <div id="barcon2" class="barcon2">
+							            <ul>
+							                <li><a href="###" id="firstPage">首页</a></li>
+							                <li><a href="###" id="prePage">上一页</a></li>
+							                <li><a href="###" id="nextPage">下一页</a></li>
+							                <li><a href="###" id="lastPage">尾页</a></li>
+							                <li><select id="jumpWhere">
+							                </select></li>
+							                <li><a href="###" id="jumpPage" onclick="jumpPage()">跳转</a></li>
+							            </ul>
+							        </div>
+						</div>
+					</td>
+				</tr>
 			</TBODY>
 		</table>
+
 	</form>
 </body>
 </HTML>
