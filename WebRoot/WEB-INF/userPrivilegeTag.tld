@@ -8,7 +8,7 @@
 
 	<tag>
 		<name>user</name>
-		<tag-class>cn.itcast.bookStore.tag.PrivilegeTag</tag-class>
+		<tag-class>cn.itcast.report.tag.PrivilegeTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
 </taglib>

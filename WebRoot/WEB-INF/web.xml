@@ -9,7 +9,7 @@
 	<!-- 编码过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
-		<filter-class>cn.itcast.bookStore.web.filter.EncodingFilter</filter-class>
+		<filter-class>cn.itcast.report.web.filter.EncodingFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
@@ -18,7 +18,7 @@
 
 	<filter>
 		<filter-name>adminPrivilegeFilter</filter-name>
-		<filter-class>cn.itcast.bookStore.web.filter.AdminPrivilegeFilter</filter-class>
+		<filter-class>cn.itcast.report.web.filter.AdminPrivilegeFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>adminPrivilegeFilter</filter-name>
@@ -27,7 +27,7 @@
 
 	<servlet>
 		<servlet-name>ShowIndexSerlvet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.factoryClient.ShowIndexSerlvet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.factoryClient.ShowIndexSerlvet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ShowIndexSerlvet</servlet-name>
@@ -36,7 +36,7 @@
 
 	<servlet>
 		<servlet-name>FindAllCustomerServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.manager.FindAllCustomerServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.manager.FindAllCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FindAllCustomerServlet</servlet-name>
@@ -45,7 +45,7 @@
 
 	<servlet>
 		<servlet-name>FactoryLoginServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.factoryClient.FactoryLoginServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.factoryClient.FactoryLoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FactoryLoginServlet</servlet-name>
@@ -54,7 +54,7 @@
 
 	<servlet>
 		<servlet-name>LogoutServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.client.LogoutServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.client.LogoutServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LogoutServlet</servlet-name>
@@ -63,7 +63,7 @@
 
 	<servlet>
 		<servlet-name>imageCode</servlet-name>
-		<servlet-class>cn.itcast.bookStore.utils.CheckImageServlet</servlet-class>
+		<servlet-class>cn.itcast.report.utils.CheckImageServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>imageCode</servlet-name>
@@ -72,7 +72,7 @@
 
 	<servlet>
 		<servlet-name>RegisterServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.client.RegisterServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.client.RegisterServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RegisterServlet</servlet-name>
@@ -81,7 +81,7 @@
 	
 	<servlet>
 		<servlet-name>ActiveUserServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.client.ActiveUserServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.client.ActiveUserServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ActiveUserServlet</servlet-name>
@@ -90,7 +90,7 @@
 
 	<servlet>
 		<servlet-name>AddCustomerServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.manager.AddCustomerServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.manager.AddCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddCustomerServlet</servlet-name>
@@ -99,7 +99,7 @@
 
 	<servlet>
 		<servlet-name>FindCustomerServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.manager.FindCustomerServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.manager.FindCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FindCustomerServlet</servlet-name>
@@ -108,7 +108,7 @@
 
 	<servlet>
 		<servlet-name>EditCustomerServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.manager.EditCustomerServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.manager.EditCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>EditCustomerServlet</servlet-name>
@@ -117,7 +117,7 @@
 
 	<servlet>
 		<servlet-name>DeleteCustomerServlet</servlet-name>
-		<servlet-class>cn.itcast.bookStore.web.servlet.manager.DeleteCustomerServlet</servlet-class>
+		<servlet-class>cn.itcast.report.web.servlet.manager.DeleteCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DeleteCustomerServlet</servlet-name>
