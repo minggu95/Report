@@ -29,15 +29,6 @@ function goPage(pno,psize){
     var startRow = (currentPage - 1) * pageSize+1;
     var endRow = currentPage * pageSize;
     endRow = (endRow > num)? num : endRow;
-    //遍历显示数据实现分页
-    /*for(var i=1;i<(num+1);i++){    
-          var irow = itable.rows[i-1];
-          if(i>=startRow && i<=endRow){
-              irow.style.display = "";    
-          }else{
-              irow.style.display = "none";
-          }
-      }*/
 
     $("#DataGrid1 tr").hide();
     for(var i=startRow-1;i<endRow;i++)
