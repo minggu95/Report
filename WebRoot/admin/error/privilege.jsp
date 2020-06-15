@@ -4,8 +4,8 @@
 <html>
 <head>
 <title>电子书城</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/client/css/main.css" type="text/css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath }/client/js/my.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath }/admin/css/main.css" type="text/css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath }/admin/js/my.js"></script>
 </head>
 
 <body class="main">

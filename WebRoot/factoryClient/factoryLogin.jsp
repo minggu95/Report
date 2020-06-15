@@ -54,13 +54,13 @@
 														<td colspan="2"
 															style="padding-top:10px; text-align:center">
 															<input name="image" type="image" onclick="return formcheck()"
-																   src="${pageContext.request.contextPath }/client/images/loginbutton.gif" width="83" height="22" />
+																   src="${pageContext.request.contextPath }/admin/images/loginbutton.gif" width="83" height="22" />
 														</td>
 													</tr>
 
 													<tr>
 														<td colspan="2" style="padding-top:10px">
-															<img src="${pageContext.request.contextPath }/client/images/loginline.gif" width="241" height="10" />
+															<img src="${pageContext.request.contextPath }/admin/images/loginline.gif" width="241" height="10" />
 														</td>
 													</tr>
 												</table>
