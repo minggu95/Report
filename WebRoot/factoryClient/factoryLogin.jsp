@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>LLGREPORT</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/client/css/factoryMain.css" type="text/css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath }/admin/css/factoryMain.css" type="text/css" />
 </head>
 
 <body class="main">
