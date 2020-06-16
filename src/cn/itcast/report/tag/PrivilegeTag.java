@@ -17,7 +17,7 @@ public class PrivilegeTag extends SimpleTagSupport {
 		
 		User user = (User) context.getSession().getAttribute("user");
 		if (user == null) {
-			response.sendRedirect(request.getContextPath() + "/client/error/privilege.jsp");
+			response.sendRedirect(request.getContextPath() + "/admin/error/privilege.jsp");
 		}
 	}
 }

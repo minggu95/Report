@@ -66,6 +66,13 @@
 												</table>
 											</td>
 										</tr>
+										<tr>
+											<td style="padding-top:10px; text-align:center">
+												<a href="${pageContext.request.contextPath }/register/register.jsp">
+													<img src="${pageContext.request.contextPath }/admin/images/signupbutton.gif" width="83" height="22" />
+												</a>
+											</td>
+										</tr>
 									</table>
 								</div></td>
 						</tr>

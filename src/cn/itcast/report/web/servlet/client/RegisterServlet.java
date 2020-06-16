@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
 			return;
 		}
 		// 注册成功，跳转到registersuccess.jsp
-		response.sendRedirect(request.getContextPath() + "/client/registersuccess.jsp");
+		response.sendRedirect(request.getContextPath() + "/register/registersuccess.jsp");
 		return;
 	}
 }

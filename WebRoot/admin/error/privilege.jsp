@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>电子书城</title>
+<title>LLGREPORT</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/admin/css/main.css" type="text/css" />
 	<script type="text/javascript" src="${pageContext.request.contextPath }/admin/js/my.js"></script>
 </head>
