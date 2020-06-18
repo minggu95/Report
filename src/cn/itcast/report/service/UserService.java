@@ -31,7 +31,7 @@ public class UserService {
 			dao.addUser(user);
 
 			// 发送激活邮件
-//			String emailMsg = "感谢您注册网上书城，点击<a href='http://localhost:8080/bookstore/activeUser?activeCode="
+//			String emailMsg = "感谢您注册LLGREPORT，点击<a href='http://localhost:8080/bookstore/activeUser?activeCode="
 //					+ user.getActiveCode() + "'>&nbsp;激活&nbsp;</a>后使用。<br>为保障您的账户安全，请在24小时内完成激活操作";
 //			MailUtils.sendMail(user.getEmail(), emailMsg);
 
